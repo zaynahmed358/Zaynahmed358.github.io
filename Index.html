@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APK Downloads</title>
+    <script>
+        function downloadApk(apkFilePath, appName) {
+            var a = document.createElement('a');
+            a.href = apkFilePath;
+            a.download = appName + '.apk'; // Use the app name for the downloaded APK
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</head>
+<body>
+    <img src="app1_icon.png" alt="App 1" onclick="downloadApk('app1.apk', 'App1')">
+    <img src="app2_icon.png" alt="App 2" onclick="downloadApk('app2.apk', 'App2')">
+    <!-- Add more images and corresponding APK files as needed -->
+</body>
+</html>
